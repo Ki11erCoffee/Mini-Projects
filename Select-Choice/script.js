@@ -10,7 +10,8 @@ textarea.addEventListener("keyup", (e) => {
 
 function createTags(input) {
   // split = seperate index according to comma
-  //
+  // filter = pass through items that match the filter
+  // map = add item to array
   const tags = input
     .split(",")
     .filter((tag) => tag.trim() !== "")
