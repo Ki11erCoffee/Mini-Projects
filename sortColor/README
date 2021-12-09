@@ -1,0 +1,6 @@
+This python file sort copy takes in two excel files
+1. A color mapping 
+2. Product handles
+
+The code will read the color in the handle based off the map given to it and it will sort all the handles in the order that you specify in the color mapping.
+It will then append a 3 char code ex. 'aaa' used for shopify's sorting algorithm to display color swatches.  
