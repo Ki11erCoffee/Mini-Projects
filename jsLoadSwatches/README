@@ -1,0 +1,3 @@
+This java script code was built to fill in the color swatches on the collections page of a website by
+grabbing all elements with the class handle and grab the data inside the element which would be the handle
+and use JQUERY to access the products image to place into the color swatch. Effectively filling in the swatch with a color
