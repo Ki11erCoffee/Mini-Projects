@@ -1,5 +1,4 @@
-      
-    var place = 0;
+var place = 0;
 
 document.addEventListener("DOMContentLoaded", function (event) {
   //the event occurred
@@ -22,9 +21,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       .done(function (product) {
         //console.log(product);
         var x = product.images.at(-1);
-        var idk = "https:" + x;
+        var address = "https:" + x;
 
-        stuff.style.backgroundImage = `url('${idk}')`;
+        var index = address.search(".jpg");
+
+        var addressSml =
+          address.slice(0, index) + "_600x600" + address.slice(index);
+
+        stuff.style.backgroundImage = `url('${addressSml}')`;
       })
       .fail(function (product) {
         stuff.parentElement.parentElement.remove();
@@ -59,9 +63,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
             .done(function (product) {
               //console.log(product);
               var x = product.images.at(-1);
-              var idk = "https:" + x;
+              var address = "https:" + x;
 
-              stuff.style.backgroundImage = `url('${idk}')`;
+              var index = address.search(".jpg");
+
+              var addressSml =
+                address.slice(0, index) + "_600x600" + address.slice(index);
+
+              stuff.style.backgroundImage = `url('${addressSml}')`;
             })
             .fail(function (product) {
               stuff.parentElement.parentElement.remove();
@@ -74,6 +83,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, 100);
   };
 });
-
-
-   
