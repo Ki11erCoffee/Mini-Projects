@@ -6,3 +6,6 @@ jQuery.getJSON(window.Shopify.routes.root + 'products/orange-new-flame-slinky-sk
 } );
 
 // AJAX request in shopify
+
+$( ".ProductForm__BuyButtons" ).load(" .ProductForm__BuyButtons > *" );
+//Refresh
