@@ -8,4 +8,5 @@ jQuery.getJSON(window.Shopify.routes.root + 'products/orange-new-flame-slinky-sk
 // AJAX request in shopify
 
 $( ".FlexonEm" ).load(" .FlexonEm > *" );
+$('.Product').load(document.URL +  ' .Product>*');
 //Refresh
