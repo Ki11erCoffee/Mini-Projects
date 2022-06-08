@@ -10,3 +10,10 @@ jQuery.getJSON(window.Shopify.routes.root + 'products/orange-new-flame-slinky-sk
 $( ".FlexonEm" ).load(" .FlexonEm > *" );
 $('.Product').load(document.URL +  ' .Product>*');
 //Refresh
+
+$jq(".color_item").click(function(e) {
+    
+    e.preventDefault();
+    console.log("Hello");
+});
+// No Page refresh on click
