@@ -9,6 +9,20 @@ jQuery.getJSON(window.Shopify.routes.root + 'products/orange-new-flame-slinky-sk
 
 $( ".FlexonEm" ).load(" .FlexonEm > *" );
 $('.Product').load(document.URL +  ' .Product>*');
+////////////////////////////////////////////////////////////
+<script type="text/javascript">
+function recp() {
+  setInterval(function() 
+  {
+    $("#result").load(location.href+ ' #my');
+  });
+}
+</script>
+
+<div id="result">
+  <div id="my"><?php echo date('a:i:s'); ?></div>
+</div>
+////////////////////////////////////////////////////////////
 //Refresh
 
 $jq(".color_item").click(function(e) {
