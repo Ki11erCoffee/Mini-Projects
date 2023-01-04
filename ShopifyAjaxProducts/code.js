@@ -31,3 +31,15 @@ $jq(".color_item").click(function(e) {
     console.log("Hello");
 });
 // No Page refresh on click
+
+
+
+// REFRESH ORDER SUMMARY
+jQuery.getJSON('/cart.js', function(cart) {
+        let cartData = cart.items;
+        document.dispatchEvent(new CustomEvent('cart:build' , {bubbles: true})); 
+        document.dispatchEvent(new CustomEvent('cart:refresh', {
+            bubbles: true,
+             detail: cartData
+        })); 
+   });
