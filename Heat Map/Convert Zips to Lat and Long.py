@@ -11,71 +11,8 @@ import geopandas as gpd
 from shapely.geometry import Point
 from geopandas import GeoDataFrame
 pandas_bokeh.output_notebook()
-import plotly.graph_objects as go
-import plotly.io as pio
 import csv
-"""
-nomi = pgeocode.Nominatim('us')
 
-edf = pd.read_csv('./idk.csv', sep=',',header=None, index_col=False ,names=['shipping_postal_code','orders'])
-edf['Latitude'] = (nomi.query_postal_code(edf['shipping_postal_code'].tolist()).latitude)
-edf['Longitude'] = (nomi.query_postal_code(edf['shipping_postal_code'].tolist()).longitude)
-
-fig = go.Figure(data=go.Scattergeo(
-        lon = edf['Longitude'],
-        lat = edf['Latitude'],
-        mode = 'markers',
-        marker_color = edf['orders'],
-        ))
-
-fig.update_layout(
-        title = 'colC Distribution',
-        geo_scope='usa',
-    )
-fig.show()
-# Save the plot as a PNG image
-pio.write_image(fig, 'plot.png')
-
-# Display a message indicating that the plot is saved
-print("Plot saved as 'plot.png' in the current directory.")
-"""
-
-
-"""
-import plotly.graph_objects as go
-import plotly.io as pio
-
-# Generate random data for the scatter plot
-import random
-num_points = 50
-x_data = [random.uniform(0, 10) for _ in range(num_points)]
-y_data = [random.uniform(0, 10) for _ in range(num_points)]
-
-# Create a scatter plot
-fig = go.Figure(data=go.Scatter(
-    x=x_data,
-    y=y_data,
-    mode='markers',
-    marker=dict(
-        size=10,
-        color='blue',  # Marker color
-    ),
-))
-
-# Set plot title
-fig.update_layout(
-    title='Random Scatter Plot',
-)
-
-# Save the plot as a PNG image
-pio.write_image(fig, 'plot.png')
-
-# Display a message indicating that the plot is saved
-print("Plot saved as 'plot.png' in the current directory.")
-"""
-
-
-import pandas as pd
 import plotly.graph_objects as go
 import plotly.io as pio
 from geopy.geocoders import Nominatim
