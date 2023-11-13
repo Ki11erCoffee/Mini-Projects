@@ -1,0 +1,1 @@
+This repository creates a heatmap based off of coordinates. There are two python files. One of the files converts a zip code into coordinates and the other generates the heatmap.
